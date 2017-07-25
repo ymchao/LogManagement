@@ -1,0 +1,23 @@
+App_Data:存放ACCESS数据库的数据文件。
+
+images：网页上用到的图片。
+
+Styles: 控件样式，网页布局的css文件。
+
+about: 界面上“关于”部分
+
+account: 界面上“账户管理”部分
+
+details: 界面上“日志详情”部分，由“详情”按钮跳转
+
+device: 界面上“设备管理”部分
+
+login：界面上，登录页面部分
+
+MasterPage：母版页（每个分界面都继承至母版页）
+
+searchtext: 页面上“日志查看”部分
+
+uptext: 页面上“日志上传”部分
+
+Web.config: 配置文件

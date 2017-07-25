@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="~/Styles/Style.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-image: url(/images/back1.jpg);">
+    <form id="Form1" runat="server">
+        <div class="page">
+
+            <div class="logo">
+
+                <asp:Label ID="Label1" runat="server" Font-Names="华文细黑" Font-Size="Large" ForeColor="White" style="z-index: 1; left: 1209px; top: 96px; position: absolute; width: 163px" Text="Label"></asp:Label>
+
+            </div>
+            <div class="menuback">
+                <asp:Menu ID="Menu1" runat="server" CssClass="menusty" Orientation="Horizontal" ForeColor="White" StaticSelectedStyle-ForeColor="black" Font-Size="Large" Height="36px" StaticEnableDefaultPopOutImage="False">
+                    <DynamicHoverStyle BackColor="#118876" />
+                    <DynamicMenuItemStyle BackColor="#1B7AB4" Font-Names="华文细黑" Font-Size="Medium" ForeColor="White" Height="25px" HorizontalPadding="15px" VerticalPadding="6px" Width="72px" />
+                    <StaticHoverStyle BackColor="#118876" />
+                    <StaticMenuItemStyle HorizontalPadding="15px" VerticalPadding="7px" />
+                    <Items>
+                        <asp:MenuItem Text="工作日志" Value="工作日志">
+                            <asp:MenuItem Text="查看日志" Value="查看日志" NavigateUrl="~/searchtext.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="上传日志" Value="上传日志" NavigateUrl="~/uptext.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="设备管理" Value="设备管理" NavigateUrl="~/device.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="密码修改" Value="密码修改" NavigateUrl="~/account.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="关于" Value="关于" NavigateUrl="~/about.aspx"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+
+
+            <div class="main">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,12 @@
+1.WebSite1和WebSite2均为网站的源代码，在VS2012上用C#语言编写的ASP.NET网页。
+
+2.WebSite1是我在服务器上放置的源代码。WebSite2是我在本地电脑上调试程序时用到的源代码。
+
+主要区别在于：代码连接access数据库的语句不同（因为路径不同）
+
+WebSite1：string ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:/WebSite1/App_Data/mydb.mdb";
+（access数据库直接在C盘WebSite1下App_Data下mydb.mdb文件）
+
+WebSite2： string ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:/Users/ymc/Desktop/WebSite1/App_Data/mydb.mdb";
+（access数据库直接在桌面的WebSite1下App_Data下mydb.mdb文件）
+
